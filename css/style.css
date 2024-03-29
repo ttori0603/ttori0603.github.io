@@ -6,13 +6,15 @@ body{
 .welcome{
 	font-size: 2rem;
 	color: #FFF !important; 
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 2px #000;
+	font-family: 'Noto Sans Japanese';
 }
 
 .article{
 	font-size: 1.5rem;
 	color: #FFF !important; 
 	-webkit-text-stroke: 1px #000;
+	font-family: 'Noto Sans Japanese';
 }
 
 .column {
