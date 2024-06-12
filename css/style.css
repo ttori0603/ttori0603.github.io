@@ -1,149 +1,68 @@
-body{
-	background-image: url('../img/background.jpg');
-	background-attachment:fixed;
+@charset "utf-8";
+
+/* 仮線 */
+/* *{
+    border: solid 1px #000000;
 }
+html,body{
+    border: 0;
+} */
 
-.welcome{
-	font-size: 2rem;
-	color: #FFF !important; 
-	-webkit-text-stroke: 2px #000;
-	font-family: 'Noto Sans Japanese';
+html{
+    font-size: 16px;
+    background-color: #e6d7e3;
 }
-
-.article{
-	font-size: 1.5rem;
-	color: #FFF !important; 
-	-webkit-text-stroke: 1px #000;
-	font-family: 'Noto Sans Japanese';
+h1{
+    font-size: 5rem;
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.11rem;
+    padding: 3rem;
+    margin: 3rem 5rem 6rem;
+    text-align: center;
 }
-
-.column {
-  height: 100vh;
-  width: 100%;
+h2{
+    font-size: 2rem;
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
-
-.left{
-	opacity: 0.5;
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 1.5rem 1rem 1.5rem 4.7rem;
 }
-
-.space{
-	height:200px;
+h4{
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", sans-serif;
 }
-
-.sentence{
-	opacity: 1.0 !important;
-	margin-left:100px;
-	margin-top:200px;
+p{
+    font-size: 1rem;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 2rem;
+    letter-spacing: 0.15rem;
 }
-
-.sentence2{
-	opacity: 1.0 !important;
+section{
+    margin: 0rem 10rem 3rem 10rem;
+    border: solid 1px #000000;
+    border-radius: 25px;
+    padding: 2rem 5rem 9rem;
+    background-color: azure;
+    background-position: center;
 }
-
-@media all and (min-width: 700px) {
-  .wrapper {
-    display: flex;
-  }
+a{
+    float: left;
+    margin: 1.5rem;
 }
-
-@media (max-width:700px) {
-	.left{
-		display: none;
-	}
+div{
+    margin-left: 5rem;
 }
-.testpage{
-	text-align: center;
+audio{
+    margin-bottom: 2rem;
 }
-
-.space_mt{
-	margin-top:50px;
+span{
+    background-color: rgb(247, 200, 100);
+    border-radius: 10px;
+    padding: 0rem 1.2rem;
 }
-
-.circle{
-	display: block;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background:white;
-	/*float:left;*/
-}
-
-.testpage{
-	font-size:20px;
-	/*position:relative;*/
-	/*float:left;*/
-	text-align: center;
-}
-
-/*
-.circle2{
-	float:left;
-}
-*/
-
-.loginform{
-	margin :0 auto;
-}
-
-.inputText{
-	clear:both;
-}
-
-
-.color1{
-	background:linear-gradient(#05FBFF, #1E00FF);
-}
-
-.color2{
-	background:linear-gradient(to bottom, #FFC778, #FFF);
-}
-
-.color3{
-	background:linear-gradient(-135deg, #E4A972, #9941D8);
-}
-
-.color4{
-	background:linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
-	}
-
-.btnstyle{
-	border-radius: 25px;
-	text-decoration:none;
-	border-style: none;
-	width:100px;
-}
-
-.or{
-	text-align: center;
-}
-
-.btnwrapper{
-		text-align: center;
-	margin :0 auto;
-}
-
-.icon{
-	width:40px;
-	height: 40px;
-}
-
-.icon2{
-	width:100px;
-	height: 100px;
-}
-
-.box {
-	width: 80px;
-	border-radius:20px;
-	background: white;
-  }
-
-  .icon_mail{
-	margin: auto;
-  	display: block;
-  }
-
-  .icon_destribution{
-	font-size: 0.75rem;
-	text-align: center;
-  }
