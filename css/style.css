@@ -115,7 +115,7 @@ html,body{
         letter-spacing: 0.15rem;
     }
     section{
-        height: 150vh;
+        height: 100vh;
         margin: 0rem 2rem 2rem;
         border: solid 1px #000000;
         border-radius: 25px;
