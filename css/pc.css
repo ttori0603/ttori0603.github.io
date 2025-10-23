@@ -1,0 +1,158 @@
+@media screen and (min-width:760px) {
+    #navArea{
+        display: flex;
+        align-items: center;
+    }
+    nav {
+        position: static;
+        width: 100%;
+        background: transparent;
+        overflow-x: inherit;
+        overflow-y: inherit;
+        z-index: 3;
+        opacity: 1;
+    }
+    nav .inner {
+        padding: 0;
+    }
+    nav .inner ul {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 20px;
+    }
+    nav .inner ul li {
+        position: relative;
+        margin: 0;
+        border-bottom: transparent;
+    }
+    nav .inner ul li a:hover {
+        background: #e4e4e4;
+    }
+    .toggle_btn {
+        display: none;
+    }
+
+    header{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 20%;
+        z-index: 1000;
+        #navArea{
+            nav{
+                .inner{
+                    ul{
+                        display: flex;
+                        flex-flow: column nowrap;
+                        gap: 10px;
+                        padding: 30px 15px;
+                        li{
+                            position: relative;
+                            a{
+                                padding: 5px;
+                                font-size: 1.9rem;
+                                font-weight: 700;
+
+                            }
+                            a:hover{
+                                background-color: transparent;
+                            }
+                        }
+                        li::before{
+                            position: absolute;
+                            left: -25px;
+                            bottom: 2px;
+                            content: "";
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 40px;
+                            filter: blur(0.5px);
+                            transition: all 0.2s;
+                        }
+                        li:hover::before{
+                            background-color: #E667FC;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    main{
+        /* display: flex;
+        flex-flow: column nowrap; */
+        gap: 40px;
+        padding-bottom: 70px;
+        align-items: center;
+        section{
+            width: 60%;
+
+        }
+        #mv{
+            /* display: flex; */
+            /* height: 100vh; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            div{
+                width: 500px;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-shrink: 0;
+                background-image: url("../img/ttori\'s\ room.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                animation: roll 15s linear infinite;
+                p{
+                    width: 239px;
+                    height: 239px;
+                    animation: roll 15s linear infinite reverse;
+                }
+            }
+        }
+        #about,#works,#contact{
+            padding: 0 15px;
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 30px;
+            h2{
+                height: 32px;
+                flex-basis: 33%;
+                display: flex;
+                
+                align-items: center;
+            }
+            dl{
+                flex-basis: 66%;
+            }
+            .contents{
+                flex-basis: 66%;
+                align-items: flex-start;
+                .mail{
+                    width: 100%;
+                    padding: 20px 30px;
+                }
+                ul{
+                    width: 40%;
+                }
+            }
+        }
+    }
+    footer{
+        height: 50px;
+        background-color: #E5E5E5;
+        text-align: center;
+        p{
+            small{
+                line-height: 50px;
+            }
+        }
+    }
+
+}
