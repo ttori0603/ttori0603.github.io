@@ -1,17 +1,20 @@
 @charset "utf-8";
 
-html,body{
+/* 基本設定 */
+html, body {
     font-size: 62.5%; /* 10pxに変換 */
     font-family: "Noto Sans JP", sans-serif;
     background-color: #E6D7E3;
     color: #555555;
 }
-img{
+
+img {
     width: 100%;
     max-width: 100%;
     height: auto;
 }
-.hidden{
+
+.hidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
@@ -20,9 +23,10 @@ img{
     height: 1px;
     width: 1px;
     padding: 0;
-    border: 0
+    border: 0;
 }
-h2{
+
+h2 {
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 150%;
@@ -30,137 +34,150 @@ h2{
     border-left: 5px solid #000;
     padding: 0 15px;
 }
-p{
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 180%;
-    letter-spacing: 1.12px;
-}
-dt{
-    font-size: 2.0rem;
-    font-weight: 500;
-}
-dd{
+
+p {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 180%;
     letter-spacing: 1.12px;
 }
 
-@keyframes roll {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+dt {
+    font-size: 2.0rem;
+    font-weight: 500;
 }
-main{
+
+dd {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 180%;
+    letter-spacing: 1.12px;
+}
+
+/* アニメーション */
+@keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* メインコンテンツエリア (ネスト解消) */
+main {
     display: flex;
     flex-flow: column nowrap;
     gap: 30px;
     padding-bottom: 60px;
-    #mv{
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        div{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
-            background-image: url("../img/ttori\'s\ room.png");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            animation: roll 15s linear infinite;
-            p{
-                width: 239px;
-                height: 239px;
-                animation: roll 15s linear infinite reverse;
-            }
-        }
-    }
-    #about,#works,#contact{
-        padding: 0 15px;
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 30px;
-    }
-    #works{
-        dl{
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 15px;
-            div{
-                padding: 0 10px 15px;
-                display: flex;
-                flex-flow: column nowrap;
-                gap: 5px;
-                border-bottom: 1px #B2B2B2 solid;
-            }
-            div:last-of-type{
-                border-bottom: transparent;
-            }
-        }
-    }
-    #contact{
-        .contents{
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 25px;
-            align-items: center;
-            .mail{
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                gap: 10px;
-                padding: 10px 30px;
-                border-radius: 10px;
-                background-color: #EAEAEA;
-                text-align: center;
-                p{
-                    a{
-                        color: #006EFF;
-                    }
-                }
-            }
-            ul{
-                display: flex;
-                flex-flow: row nowrap;
-                width: 60%;
-                gap: 15%;
-                a{
-                    flex-basis: 33.3%;
-                    overflow: hidden;
-                    border-radius: 10px;
-                }
-                a:first-of-type{
-                    border-radius: 0;
-                    scale: 0.9;
-                }
-            }
-        }
-    }
-
 }
-footer{
+
+main #mv {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main #mv div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background-image: url("../img/ttori's room.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    animation: roll 15s linear infinite;
+}
+
+main #mv div p {
+    width: 239px;
+    height: 239px;
+    animation: roll 15s linear infinite reverse;
+}
+
+main #about,
+main #works,
+main #contact {
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+}
+
+main #works dl {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+
+main #works dl div {
+    padding: 0 10px 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+    border-bottom: 1px #B2B2B2 solid;
+}
+
+main #works dl div:last-of-type {
+    border-bottom: transparent;
+}
+
+main #contact .contents {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+    align-items: center;
+}
+
+main #contact .contents .mail {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    text-align: center;
+}
+
+main #contact .contents .mail p a {
+    color: #006EFF;
+}
+
+main #contact .contents ul {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 60%;
+    gap: 15%;
+    list-style: none;
+}
+
+main #contact .contents ul a {
+    flex-basis: 33.3%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+main #contact .contents ul a:first-of-type {
+    border-radius: 0;
+    transform: scale(0.9);
+}
+
+/* フッター */
+footer {
     height: 50px;
     background-color: #E5E5E5;
     text-align: center;
-    p{
-        small{
-            line-height: 50px;
-        }
-    }
 }
 
+footer p small {
+    line-height: 50px;
+}
+
+/* ナビゲーション */
 nav {
     display: block;
     position: fixed;
@@ -176,26 +193,32 @@ nav {
     z-index: 3;
     opacity: 0;
 }
+
 .open nav {
     left: 0;
     opacity: 1;
 }
+
 nav .inner {
     padding: 25px;
 }
+
 nav .inner ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 nav .inner ul li {
     position: relative;
     margin: 0;
     border-bottom: 1px solid #B2B2B2;
 }
-nav .inner ul li:last-of-type{
+
+nav .inner ul li:last-of-type {
     border-bottom: transparent;
 }
+
 nav .inner ul li a {
     display: block;
     color: #333;
@@ -205,18 +228,19 @@ nav .inner ul li a {
     transition-duration: 0.2s;
     border-radius: 5px;
 }
+
 nav .inner ul li a:hover {
     background: #e4e4e4;
 }
+
 @media screen and (max-width: 767px) {
     nav {
         left: -220px;
         width: 220px;
     }
 }
-/*============
-.toggle_btn
-=============*/
+
+/* トグルボタン */
 .toggle_btn {
     display: block;
     position: fixed;
@@ -228,6 +252,7 @@ nav .inner ul li a:hover {
     cursor: pointer;
     z-index: 3;
 }
+
 .toggle_btn span {
     display: block;
     position: absolute;
@@ -238,36 +263,35 @@ nav .inner ul li a:hover {
     border-radius: 4px;
     transition: all .5s;
 }
-.toggle_btn span:nth-child(1) {
-    top: 4px;
-}
-.toggle_btn span:nth-child(2) {
-    top: 14px;
-}
-.toggle_btn span:nth-child(3) {
-    bottom: 4px;
-}
+
+.toggle_btn span:nth-child(1) { top: 4px; }
+.toggle_btn span:nth-child(2) { top: 14px; }
+.toggle_btn span:nth-child(3) { bottom: 4px; }
+
 .open .toggle_btn span {
     background-color: #fff;
 }
+
 .open .toggle_btn span:nth-child(1) {
     -webkit-transform: translateY(10px) rotate(-315deg);
     transform: translateY(10px) rotate(-315deg);
 }
+
 .open .toggle_btn span:nth-child(2) {
     opacity: 0;
 }
+
 .open .toggle_btn span:nth-child(3) {
     -webkit-transform: translateY(-10px) rotate(315deg);
     transform: translateY(-10px) rotate(315deg);
 }
-/*============
-#mask
-=============*/
+
+/* マスクエリア */
 #mask {
     display: none;
     transition: all .5s;
 }
+
 .open #mask {
     display: block;
     position: fixed;
